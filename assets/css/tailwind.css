@@ -1,0 +1,195 @@
+/*
+ * Theme Name: GabutPress
+ * Author: Logor
+ * Author URI: https://devlogor.me/
+ * Description: Simple Wordpress Theme for bloging
+ * Version: 1.0.0
+ */
+
+
+
+@tailwind base;
+@tailwind components;
+
+/* custom Component 
+  example use :
+  .classname {
+    @apply rounded-b-lg shadow-md;
+  }
+*/
+
+/* line clamp */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.container {
+  max-width: 1080px;
+  @apply mx-auto px-4;
+}
+
+/* menu */
+.navbar {
+  @apply shadow-md dark:shadow-xl mb-10 relative z-10 transition-all duration-200 top-0 dark:bg-slate-800 bg-white;
+}
+.navbar .menu {
+  @apply dark:bg-slate-800 bg-white font-medium overflow-y-auto md:overflow-visible fixed md:sticky md:p-0 md:shadow-none md:translate-x-0 transition md:max-w-none md:w-auto left-0 top-0 bottom-0 max-w-xs w-3/4 p-5 shadow-lg -translate-x-full;
+}
+.navbar .menu.translate-x-0 {
+  transform: translateX(0px);
+}
+.navbar .menu > li {
+  @apply mb-2 md:mb-0 md:mr-2 md:float-left;
+}
+.navbar .menu > li > a {
+  @apply p-1 block hover:text-blue-500;
+}
+.navbar .menu > li > ul {
+  @apply md:hidden md:absolute overflow-hidden bg-gray-50 dark:bg-slate-700 shadow py-1 rounded;
+}
+.navbar .menu > li:hover > ul {
+  min-width: 120px;
+  display: block;
+}
+.navbar .menu > li > ul > li > a {
+  @apply block px-4 py-3.5 font-medium leading-none text-sm hover:bg-white dark:hover:bg-slate-800 transition duration-300;
+}
+.navbar .box-sercing.show {
+  @apply translate-y-0;
+}
+
+/* card */
+.card .gambar {
+  @apply mb-3 aspect-w-15 aspect-h-10 rounded-md overflow-hidden;
+}
+.card .gambar > img {
+  @apply w-full h-full object-center object-cover hover:scale-110 hover:brightness-90 transition duration-300;
+}
+.card .judul {
+  @apply text-lg font-semibold my-2 inline-block;
+}
+.card .desc {
+  @apply text-sm text-gray-600 leading-6 line-clamp-3 dark:text-gray-400;
+}
+.card .datetime {
+  @apply my-3 text-xs text-gray-400 flex items-center dark:text-gray-500;
+}
+
+/* konten */
+.konten p {
+  @apply mb-6 leading-7 md:leading-8;
+}
+.konten p:last-child {
+  margin: 0;
+}
+.konten h1 {
+  @apply text-2xl font-semibold mt-3 mb-2;
+}
+.konten h2 {
+  @apply text-xl font-semibold mt-3 mb-2;
+}
+.konten h3 {
+  @apply text-lg font-semibold mt-3 mb-2;
+}
+.konten h4 {
+  @apply text-base font-semibold mt-3 mb-2;
+}
+.konten p a {
+  @apply text-blue-500 hover:text-blue-600 hover:underline;
+}
+.konten table {
+  @apply min-w-full;
+}
+.konten table thead {
+  @apply bg-gray-50 dark:bg-gray-700;
+}
+.konten table th {
+  @apply py-3 px-6 text-xs tracking-wider text-left text-gray-700 uppercase dark:text-gray-400;
+}
+.konten table tbody tr {
+  @apply bg-white border-b dark:bg-gray-800 dark:border-gray-700;
+}
+.konten table td {
+  @apply py-4 px-6 text-sm text-gray-600 whitespace-nowrap dark:text-gray-300;
+}
+.konten ul, .konten ol {
+  @apply pl-4 list-disc mb-4;
+}
+.konten ol {
+  @apply list-decimal;
+}
+.konten li {
+  @apply leading-8;
+}
+.konten hr {
+  @apply my-7;
+}
+blockquote {
+  @apply border-l-4 p-3 text-sm italic text-gray-600 my-2 dark:text-gray-300 bg-slate-100 dark:bg-gray-700;
+}
+blockquote footer, blockquote cite {
+  @apply text-xs text-gray-500 my-1 dark:text-gray-400;
+}
+.konten .tag a {
+  @apply inline-block leading-none px-3 md:px-4 py-2.5 mb-2 mr-2 bg-gray-200 text-xs text-gray-500 dark:bg-gray-700 dark:text-gray-200 font-medium rounded dark:hover:bg-blue-500 hover:bg-blue-500 hover:text-white;
+}
+
+@tailwind utilities;
+
+
+
+/* komentar */
+:root {
+  
+  --bg-opacity: rgba(0, 0, 0, 0.06);
+  --text-color-base:#404040;
+  --tw-text-opacity: 1;
+  --color-primary: rgb(59 130 246 / var(--tw-text-opacity));
+}
+.dark {
+  --bg-opacity:rgba(255, 255, 255, 0.01);
+  --text-color-base:#ccc;
+}
+.komentar ul, .komentar ol {margin: 0;padding: 0;}
+#comments,#reply-title{font-size: 1.25rem;margin-bottom: 15px;padding-top: 5px;}
+.comment-form-url,.comment-form-email,.comment-form-author{float:left;display:inline-block;width:33.33%;padding:0 3px}
+#commentform input{width:100%;margin-top:5px;padding:5px 10px;border-radius:3px;font-weight:400;border:1px solid var(--bg-opacity);background:var(--bg-opacity);color: var(--text-color-base);}
+#commentform p{margin-bottom:10px}
+#commentform{overflow:hidden;padding:1%;font-size:13px;}
+input#wp-comment-cookies-consent{width:auto}
+#commentform #comment{width:100%;max-width:100%;padding:5px 10px;border-radius:3px;display:block;border:1px solid var(--bg-opacity);margin-top:10px;background:var(--bg-opacity);height:120px;color: var(--text-color-base);}
+.commentlist li .avatar{float: left;margin-right: 10px;border: 3px solid var(--color-primary);border-radius: 100%;width: 42px;height: 42px;}
+.commentlist cite,.commentlist cite a{font-weight: 700;font-style: normal;font-size: 14px;display: block;overflow: hidden;text-overflow: ellipsis;}
+.commentlist p{font-weight:400;text-transform:none}
+.commentmetadata{padding:2px;font-weight: 400;float: right;font-size: 11px;}
+.commentlist{padding:0;}
+.commentlist li{margin-bottom: 1.7rem;padding: 1rem 1rem 0;list-style: outside none;border-radius: 5px;border: 2px solid var(--bg-opacity);}
+.commentlist li ul li{margin-left:13px;border:none!important;}
+.comment-author{min-height:52px;}
+.comment-metadata{float: right;font-size: 13px;margin: 5px;}
+.commentlist p{margin:0;border-left:3px solid var(--bg-opacity);padding:15px;border-top: 1px solid var(--bg-opacity);}
+.children{padding:0;border-left:3px solid var(--bg-opacity);}
+.nocomments{display:none;}
+.commentmetadata{margin:-30px 0;display:inline-block;}
+.reply{background:var(--color-primary);font-size:11px;width: 50px;text-align: center;border-radius: 0 5px;}
+.reply a{color:#fff} .says{display:none;}

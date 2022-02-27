@@ -96,6 +96,9 @@
 }
 
 /* konten */
+.artikel .gambar img {
+  display: inline-block;
+}
 .konten p {
   @apply mb-6 leading-7 md:leading-8;
 }

@@ -829,6 +829,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 /* konten */
 
+.artikel .gambar img {
+  display: inline-block;
+}
+
 .konten p {
   margin-bottom: 1.5rem;
   line-height: 1.75rem;

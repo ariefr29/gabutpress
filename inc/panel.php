@@ -9,6 +9,9 @@ function devlogor_menu() {
 }
 function register_devlogor_settings() {
   register_setting( 'devlogor-settings', 'set_theme_mode' );
+  register_setting( 'devlogor-settings', 'set_profile' );
+  register_setting( 'devlogor-settings', 'set_profile_imageurl' );
+  register_setting( 'devlogor-settings', 'set_profile_text' );
   register_setting( 'devlogor-settings', 'set_footer_heading' );
   register_setting( 'devlogor-settings', 'set_footer_text' );
   register_setting( 'devlogor-settings', 'set_url_instagram' );
@@ -40,6 +43,24 @@ function configuration() {
               <option value="dark" <?php if(get_option('set_theme_mode')=='dark') echo 'selected="selected"'; ?>>Dark</option>
             </select>
           </td>
+        </tr>
+
+        <tr valign="top">
+          <th scope="row">Short Profile</th>
+          <td>
+            <select name="set_profile">
+              <option value="no" <?php if(get_option('set_profile')=='no') echo 'selected="selected"'; ?>>None</option>
+              <option value="yes" <?php if(get_option('set_profile')=='yes') echo 'selected="selected"'; ?>>Displaying</option>
+            </select>
+          </td>
+        </tr>
+        <tr valign="top">
+          <th scope="row">Avatar [image]</th>
+          <td><input type="text" name="set_profile_imageurl" value="<?php echo get_option('set_profile_imageurl'); ?>" placeholder="Url Image"></td>
+        </tr>
+        <tr valign="top" class="btom">
+          <th scope="row">Text</th>
+          <td><textarea name="set_profile_text" rows="3" value="<?php echo esc_attr( get_option('set_profile_text') ); ?>" class="large-text code" placeholder="short text about you"><?php echo esc_attr( get_option('set_profile_text') ); ?></textarea></td>
         </tr>
 
         <tr valign="top">

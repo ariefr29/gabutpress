@@ -1,7 +1,6 @@
 === GabutPress ===
 
 Creator: Devlogor
-Donate link: https://calmestghost.com/donate
 Theme link: https://github.com/ariefr29/gabutpress
 Tags: simple, featured-images, tailwindcss
 Requires at least: 5.0

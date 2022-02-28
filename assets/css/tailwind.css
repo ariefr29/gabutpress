@@ -7,16 +7,9 @@
  */
 
 
-
 @tailwind base;
 @tailwind components;
 
-/* custom Component 
-  example use :
-  .classname {
-    @apply rounded-b-lg shadow-md;
-  }
-*/
 
 /* line clamp */
 .line-clamp-1 {
@@ -155,6 +148,20 @@ blockquote footer, blockquote cite {
 }
 .konten .tag a {
   @apply inline-block leading-none px-3 md:px-4 py-2.5 mb-2 mr-2 bg-gray-200 text-xs text-gray-500 dark:bg-gray-700 dark:text-gray-200 font-medium rounded dark:hover:bg-blue-500 hover:bg-blue-500 hover:text-white;
+}
+
+/* Pagination */
+.pagination { 
+  @apply mb-12 p-3 text-center;
+}
+.pagination a, .pagination span {
+  @apply inline-block px-4 py-3 leading-none rounded border-2 text-gray-500 border-gray-500 hover:bg-blue-500 hover:border-blue-500 hover:text-white;
+}
+.prev.page-numbers, .next.page-numbers, .pagination .current {
+  @apply border-blue-500 text-blue-500;
+}
+.pagination .current {
+  @apply hover:bg-inherit hover:text-blue-500;
 }
 
 @tailwind utilities;

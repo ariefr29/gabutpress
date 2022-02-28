@@ -151,6 +151,9 @@ blockquote footer, blockquote cite {
 }
 
 /* Pagination */
+.screen-reader-text {
+  display: none !important;
+}
 .pagination { 
   @apply mb-12 p-3 text-center;
 }

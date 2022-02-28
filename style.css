@@ -1049,6 +1049,10 @@ blockquote footer, blockquote cite {
 
 /* Pagination */
 
+.screen-reader-text {
+  display: none !important;
+}
+
 .pagination {
   margin-bottom: 3rem;
   padding: 0.75rem;

@@ -15,9 +15,23 @@ endif;
 
 the_posts_pagination( array(
   'mid_size' => 2,
-  'prev_text' => __('Prev'),
-  'next_text' => __('Next'),
+  'prev_text' => esc_attr__( 'Prev', 'gabutpress' ),
+  'next_text' => esc_attr__( 'Next', 'gabutpress' ),
 ));
+
+echo '<div class="hidden">';
+$args = array (
+  'before'            => '<div class="page-links-XXX"><span class="page-link-text">' . __( 'More pages: ', 'gabutpress' ) . '</span>',
+  'after'             => '</div>',
+  'link_before'       => '<span class="page-link">',
+  'link_after'        => '</span>',
+  'next_or_number'    => 'next',
+  'separator'         => ' | ',
+  'nextpagelink'      => __( 'Next &raquo', 'gabutpress' ),
+  'previouspagelink'  => __( '&laquo Previous', 'gabutpress' ),
+);
+wp_link_pages( $args );
+echo '</div>';
 
 
 get_footer(); ?>

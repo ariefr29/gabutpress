@@ -12,7 +12,7 @@
       <div class="gambar overflow-hidden rounded-md text-center md:mb-14 order-1 md:order-2">
         <?php the_post_thumbnail(); ?>
       </div>
-    <? } ?>
+    <?php } ?>
     <div class="konten order-3 mb-5 w-full max-w-3xl text-sm md:text-base mx-auto text-gray-700 dark:text-gray-300">
       <?php the_content(); ?>
       <div class="tag flex flex-wrap my-2">

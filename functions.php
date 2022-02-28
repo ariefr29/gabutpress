@@ -1,6 +1,6 @@
 <?php
 
-if (!function_exists('etheme_setup')) {
+if (!function_exists('gabutpress_setup')) {
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -8,12 +8,12 @@ if (!function_exists('etheme_setup')) {
      * runs before the init hook. The init hook is too late for some features, such
      * as indicating support for post thumbnails.
      */
-    function etheme_setup() {
+    function gabutpress_setup() {
         /**
          * Make theme available for translation.
          * Translations can be filed in the /languages/ directory.
          */
-        load_theme_textdomain('etheme');
+        load_theme_textdomain( 'gabutpress', get_template_directory() . '/languages' );
 
         // Add default posts and comments RSS feed links to head.
 	    add_theme_support( 'automatic-feed-links' );
@@ -39,8 +39,8 @@ if (!function_exists('etheme_setup')) {
          */
         // Menu
         register_nav_menus(array(
-            'main_menu' => __( 'header menu', 'etheme' ),
-            'footer_menu' => __( 'footer menu', 'etheme' ),
+            'main_menu' => __( 'header menu', 'gabutpress' ),
+            'footer_menu' => __( 'footer menu', 'gabutpress' ),
         ));
 
         /**
@@ -61,11 +61,11 @@ if (!function_exists('etheme_setup')) {
         );
     }
 }
-add_action('after_setup_theme', 'etheme_setup');
+add_action('after_setup_theme', 'gabutpress_setup');
 
 // pingback url auto-discovery header for singularly identifiable articles.
-add_action( 'wp_head', 'etheme_pingback_header' );
-function etheme_pingback_header() {
+add_action( 'wp_head', 'gabutpress_pingback_header' );
+function gabutpress_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">' . "\n", esc_url(get_bloginfo( 'pingback_url' )) );
 	}
@@ -80,9 +80,9 @@ function theme_widgets_init()
 {
     register_sidebar(
         array(
-            'name'          => esc_html__('Sidebar', 'etheme'),
+            'name'          => esc_html__('Sidebar', 'gabutpress'),
             'id'            => 'sidebar-1',
-            'description'   => esc_html__('Add widgets here.', 'etheme'),
+            'description'   => esc_html__('Add widgets here.', 'gabutpress'),
             'before_widget' => '<section id="%1$s" class="sidbox widget %2$s">',
             'after_widget'  => '</section>',
             'before_title'  => '<h3 class="widget-title">',

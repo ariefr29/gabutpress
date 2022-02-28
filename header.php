@@ -12,5 +12,5 @@
   <?php wp_head(); ?>
 </head>
 
-<body class="font-poppins dark:bg-slate-800 dark:text-gray-300">
+<body <?php body_class( 'font-poppins dark:bg-slate-800 dark:text-gray-300' ); ?>>
 <?php get_template_part( 'template-parts/navbar/nav' ) ?>

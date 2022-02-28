@@ -60,7 +60,7 @@ function configuration() {
         </tr>
         <tr valign="top" class="btom">
           <th scope="row">Text</th>
-          <td><textarea name="set_profile_text" rows="3" value="<?php echo esc_attr( get_option('set_profile_text') ); ?>" class="large-text code" placeholder="short text about you"><?php echo esc_attr( get_option('set_profile_text') ); ?></textarea></td>
+          <td><textarea name="set_profile_text" rows="3" value="<?php echo esc_html( get_option('set_profile_text') ); ?>" class="large-text code" placeholder="short text about you"><?php echo esc_html( get_option('set_profile_text') ); ?></textarea></td>
         </tr>
 
         <tr valign="top">
@@ -69,7 +69,7 @@ function configuration() {
         </tr>
         <tr valign="top" class="btom">
           <th scope="row">[Footer] Text</th>
-          <td><textarea name="set_footer_text" rows="3" value="<?php echo esc_attr( get_option('set_footer_text') ); ?>" class="large-text code" placeholder="text description in footer"><?php echo esc_attr( get_option('set_footer_text') ); ?></textarea></td>
+          <td><textarea name="set_footer_text" rows="3" value="<?php echo esc_html( get_option('set_footer_text') ); ?>" class="large-text code" placeholder="text description in footer"><?php echo esc_html( get_option('set_footer_text') ); ?></textarea></td>
         </tr>
         
         <tr valign="top">

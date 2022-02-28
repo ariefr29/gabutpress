@@ -162,7 +162,7 @@
     <h1>4<span>0</span>4</h1>
     </div>
     <h2>the page you requested could not found</h2>
-    <form class="notfound-search" action="<?php bloginfo('url'); ?>">
+    <form class="notfound-search" action="<?php echo esc_url( home_url() ); ?>">
     <input class="w-full border text-lg leading-10 px-5 border-slate-500 rounded" type="text" placeholder="Search..." name="s">
     <input type="hidden" name="post_type" value="post" />
     </form>

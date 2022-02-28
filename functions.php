@@ -120,3 +120,9 @@ add_action('wp_enqueue_scripts', 'theme_assets');
  * Additional features to allow styling of the theme.
  */
 require get_template_directory() . '/inc/set-functions.php';
+
+if ( !function_exists( 'gabutpress_wp_body_open' ) ) {
+    function gabutpress_wp_body_open() {
+        do_action( 'wp_body_open' );
+    }
+}

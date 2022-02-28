@@ -1,14 +1,17 @@
 /*
  * Theme Name: GabutPress
+ * Theme URI: https://github.com/ariefr29/gabutpress
  * Author: Logor
  * Version: 1.0.0
  * Tested up to: 5.9
  * Requires PHP: 7.0
  * Requires at least: 5.0
  * Author URI: https://devlogor.me/
- * Theme URI: https://github.com/ariefr29/gabutpress
  * Description: Simple Wordpress Theme for bloging
- * Tags: blog, one-column, grid, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments
+ * Tags: blog, one-column, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, theme-options, threaded-comments
+ * License: GNU General Public License v3 or Later
+ * License URI: https://www.gnu.org/licenses/gpl.html
+ * Text Domain: gabutpress
  */
 
 
@@ -78,7 +81,7 @@
 
 /* card */
 .card .gambar {
-  @apply mb-3 aspect-w-15 aspect-h-10 rounded-md overflow-hidden;
+  @apply mb-3 aspect-w-4 aspect-h-3 rounded-md overflow-hidden;
 }
 .card .gambar > img {
   @apply w-full h-full object-center object-cover hover:scale-110 hover:brightness-90 transition duration-300;
@@ -153,6 +156,20 @@ blockquote footer, blockquote cite {
 }
 .konten .tag a {
   @apply inline-block leading-none px-3 md:px-4 py-2.5 mb-2 mr-2 bg-gray-200 text-xs text-gray-500 dark:bg-gray-700 dark:text-gray-200 font-medium rounded dark:hover:bg-blue-500 hover:bg-blue-500 hover:text-white;
+}
+.wp-caption{text-align: center;}.wp-caption-text{font-size: 11px;}.gallery-caption{}
+.aligncenter,
+.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
 }
 
 /* Pagination */

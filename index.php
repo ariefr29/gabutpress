@@ -11,14 +11,13 @@ else:
     get_template_part( 'template-parts/about' );
   }
   get_template_part( 'template-parts/content', 'index' );
-
-  the_posts_pagination( array(
-    'mid_size' => 2,
-    'prev_text' => __('Prev'),
-    'next_text' => __('Next'),
-    'screen_reader_text' => '',
-  ));
 endif;
+
+the_posts_pagination( array(
+  'mid_size' => 2,
+  'prev_text' => __('Prev'),
+  'next_text' => __('Next'),
+));
 
 
 get_footer(); ?>
